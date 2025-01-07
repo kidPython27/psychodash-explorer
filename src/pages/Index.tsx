@@ -2,7 +2,8 @@ import { useToast } from "@/hooks/use-toast";
 import { DashboardCard } from "@/components/DashboardCard";
 import { TestCard } from "@/components/TestCard";
 import { ProgressCard } from "@/components/ProgressCard";
-import { Award, Download, TrendingUp, Share2 } from "lucide-react";
+import { Award, Download, TrendingUp, Share2, CreditCard, FileText, Brain, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const { toast } = useToast();
@@ -24,12 +25,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-dashboard-neutral-100 p-6 sm:p-8">
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-dashboard-neutral-400">
-            Track your psychometric assessment progress
-          </p>
+        {/* Header with User Welcome */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold text-gray-900">Welcome back, Alex!</h1>
+            <p className="text-dashboard-neutral-400">
+              Track your psychometric assessment progress
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="bg-dashboard-purple/10 px-4 py-2 rounded-lg">
+              <p className="text-sm text-dashboard-purple font-medium">Credits Available: 3</p>
+            </div>
+            <Button className="bg-dashboard-purple hover:bg-dashboard-purple-dark">
+              <CreditCard className="w-4 h-4 mr-2" />
+              Buy Credits
+            </Button>
+          </div>
         </div>
 
         {/* Progress Overview */}
@@ -42,17 +54,19 @@ const Index = () => {
             className="md:col-span-2"
           >
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-dashboard-neutral-100 rounded-lg">
+              <div className="flex items-center justify-between p-4 bg-dashboard-neutral-100 rounded-lg border border-dashboard-neutral-200">
                 <div className="flex items-center gap-4">
                   <TrendingUp className="w-5 h-5 text-dashboard-purple" />
                   <div>
-                    <p className="font-medium">RIASEC Assessment</p>
+                    <p className="font-medium text-gray-900">RIASEC Assessment</p>
                     <p className="text-sm text-dashboard-neutral-400">
                       Completed on April 15, 2024
                     </p>
                   </div>
                 </div>
-                <Download className="w-5 h-5 text-dashboard-neutral-400 cursor-pointer hover:text-dashboard-purple transition-colors" />
+                <Button variant="ghost" size="icon">
+                  <Download className="w-5 h-5 text-dashboard-neutral-400 hover:text-dashboard-purple transition-colors" />
+                </Button>
               </div>
             </div>
           </DashboardCard>
@@ -80,16 +94,74 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Cross-selling Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <DashboardCard
+            title="Build Your Resume"
+            subtitle="Create a professional CV"
+            className="hover:border-dashboard-purple border border-transparent transition-all"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-dashboard-purple/10 rounded-lg">
+                  <FileText className="w-5 h-5 text-dashboard-purple" />
+                </div>
+                <p className="text-sm text-dashboard-neutral-400">AI-powered resume builder</p>
+              </div>
+              <Button variant="ghost" className="text-dashboard-purple hover:text-dashboard-purple-dark">
+                Start Now
+              </Button>
+            </div>
+          </DashboardCard>
+
+          <DashboardCard
+            title="Interview Prep"
+            subtitle="Practice with AI"
+            className="hover:border-dashboard-purple border border-transparent transition-all"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-dashboard-purple/10 rounded-lg">
+                  <Brain className="w-5 h-5 text-dashboard-purple" />
+                </div>
+                <p className="text-sm text-dashboard-neutral-400">Mock interviews with feedback</p>
+              </div>
+              <Button variant="ghost" className="text-dashboard-purple hover:text-dashboard-purple-dark">
+                Practice
+              </Button>
+            </div>
+          </DashboardCard>
+
+          <DashboardCard
+            title="Aptitude Tests"
+            subtitle="Enhance your skills"
+            className="hover:border-dashboard-purple border border-transparent transition-all"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-dashboard-purple/10 rounded-lg">
+                  <BookOpen className="w-5 h-5 text-dashboard-purple" />
+                </div>
+                <p className="text-sm text-dashboard-neutral-400">Comprehensive test series</p>
+              </div>
+              <Button variant="ghost" className="text-dashboard-purple hover:text-dashboard-purple-dark">
+                Explore
+              </Button>
+            </div>
+          </DashboardCard>
+        </div>
+
         {/* Premium Features */}
         <DashboardCard
           title="Unlock Premium Features"
           subtitle="Get access to advanced insights and additional tests"
+          className="bg-gradient-to-br from-white to-dashboard-purple/5 border border-dashboard-purple/20"
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="flex items-start gap-3">
               <Award className="w-5 h-5 text-dashboard-purple mt-1" />
               <div>
-                <p className="font-medium">Detailed Reports</p>
+                <p className="font-medium text-gray-900">Detailed Reports</p>
                 <p className="text-sm text-dashboard-neutral-400">
                   Get comprehensive insights
                 </p>
@@ -98,7 +170,7 @@ const Index = () => {
             <div className="flex items-start gap-3">
               <TrendingUp className="w-5 h-5 text-dashboard-purple mt-1" />
               <div>
-                <p className="font-medium">Progress Tracking</p>
+                <p className="font-medium text-gray-900">Progress Tracking</p>
                 <p className="text-sm text-dashboard-neutral-400">
                   Monitor your growth
                 </p>
@@ -107,7 +179,7 @@ const Index = () => {
             <div className="flex items-start gap-3">
               <Share2 className="w-5 h-5 text-dashboard-purple mt-1" />
               <div>
-                <p className="font-medium">Share Results</p>
+                <p className="font-medium text-gray-900">Share Results</p>
                 <p className="text-sm text-dashboard-neutral-400">
                   Export and share reports
                 </p>
