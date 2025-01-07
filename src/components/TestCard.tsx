@@ -22,13 +22,13 @@ export const TestCard = ({
   onShare,
 }: TestCardProps) => {
   return (
-    <div className="bg-white rounded-xl p-6 border border-dashboard-neutral-200 hover:border-dashboard-purple transition-all duration-300">
+    <div className="bg-white rounded-xl p-6 border border-dashboard-neutral-200 hover:border-dashboard-teal transition-all duration-300 shadow-sm hover:shadow-md">
       <div className="flex justify-between items-start mb-4">
         <div>
           <div className="flex items-center gap-2">
             <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
             {isPremium && (
-              <span className="px-2 py-1 bg-dashboard-purple-light text-dashboard-purple text-xs font-medium rounded-full">
+              <span className="px-2 py-1 bg-dashboard-teal-light text-dashboard-teal text-xs font-medium rounded-full">
                 Premium
               </span>
             )}
@@ -49,7 +49,7 @@ export const TestCard = ({
             "flex-1",
             isCompleted
               ? "bg-dashboard-neutral-200 hover:bg-dashboard-neutral-300 text-gray-700"
-              : "bg-dashboard-purple hover:bg-dashboard-purple-dark text-white"
+              : "bg-dashboard-teal hover:bg-dashboard-teal-dark text-white"
           )}
         >
           {isCompleted ? "Retake Test" : "Start Test"}
@@ -59,7 +59,7 @@ export const TestCard = ({
             variant="outline"
             size="icon"
             onClick={onShare}
-            className="border-dashboard-neutral-200 hover:border-dashboard-purple"
+            className="border-dashboard-neutral-200 hover:border-dashboard-teal"
           >
             <Share2 className="w-4 h-4" />
           </Button>

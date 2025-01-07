@@ -27,10 +27,10 @@ export default {
         foreground: "hsl(var(--foreground))",
         
         // Custom colors
-        "dashboard-purple": {
-          light: "#E5DEFF",
-          DEFAULT: "#9b87f5",
-          dark: "#7E69AB"
+        "dashboard-teal": {
+          light: "#E6FFFA",
+          DEFAULT: "#0D9488",
+          dark: "#0F766E"
         },
         "dashboard-neutral": {
           100: "#F6F6F7",

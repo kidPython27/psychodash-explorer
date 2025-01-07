@@ -34,10 +34,10 @@ const Index = () => {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <div className="bg-dashboard-purple/10 px-4 py-2 rounded-lg">
-              <p className="text-sm text-dashboard-purple font-medium">Credits Available: 3</p>
+            <div className="bg-dashboard-teal/10 px-4 py-2 rounded-lg">
+              <p className="text-sm text-dashboard-teal font-medium">Credits Available: 3</p>
             </div>
-            <Button className="bg-dashboard-purple hover:bg-dashboard-purple-dark">
+            <Button className="bg-dashboard-teal hover:bg-dashboard-teal-dark text-white shadow-sm">
               <CreditCard className="w-4 h-4 mr-2" />
               Buy Credits
             </Button>
@@ -56,7 +56,7 @@ const Index = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-4 bg-dashboard-neutral-100 rounded-lg border border-dashboard-neutral-200">
                 <div className="flex items-center gap-4">
-                  <TrendingUp className="w-5 h-5 text-dashboard-purple" />
+                  <TrendingUp className="w-5 h-5 text-dashboard-teal" />
                   <div>
                     <p className="font-medium text-gray-900">RIASEC Assessment</p>
                     <p className="text-sm text-dashboard-neutral-400">
@@ -65,7 +65,7 @@ const Index = () => {
                   </div>
                 </div>
                 <Button variant="ghost" size="icon">
-                  <Download className="w-5 h-5 text-dashboard-neutral-400 hover:text-dashboard-purple transition-colors" />
+                  <Download className="w-5 h-5 text-dashboard-neutral-400 hover:text-dashboard-teal transition-colors" />
                 </Button>
               </div>
             </div>
@@ -99,16 +99,16 @@ const Index = () => {
           <DashboardCard
             title="Build Your Resume"
             subtitle="Create a professional CV"
-            className="hover:border-dashboard-purple border border-transparent transition-all"
+            className="bg-gradient-to-br from-white to-dashboard-teal/5 hover:shadow-lg border-2 border-dashboard-teal/20 hover:border-dashboard-teal/40 transition-all"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-dashboard-purple/10 rounded-lg">
-                  <FileText className="w-5 h-5 text-dashboard-purple" />
+                <div className="p-2 bg-dashboard-teal/10 rounded-lg">
+                  <FileText className="w-5 h-5 text-dashboard-teal" />
                 </div>
                 <p className="text-sm text-dashboard-neutral-400">AI-powered resume builder</p>
               </div>
-              <Button variant="ghost" className="text-dashboard-purple hover:text-dashboard-purple-dark">
+              <Button className="bg-dashboard-teal hover:bg-dashboard-teal-dark text-white shadow-sm">
                 Start Now
               </Button>
             </div>
@@ -117,16 +117,16 @@ const Index = () => {
           <DashboardCard
             title="Interview Prep"
             subtitle="Practice with AI"
-            className="hover:border-dashboard-purple border border-transparent transition-all"
+            className="bg-gradient-to-br from-white to-dashboard-teal/5 hover:shadow-lg border-2 border-dashboard-teal/20 hover:border-dashboard-teal/40 transition-all"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-dashboard-purple/10 rounded-lg">
-                  <Brain className="w-5 h-5 text-dashboard-purple" />
+                <div className="p-2 bg-dashboard-teal/10 rounded-lg">
+                  <Brain className="w-5 h-5 text-dashboard-teal" />
                 </div>
                 <p className="text-sm text-dashboard-neutral-400">Mock interviews with feedback</p>
               </div>
-              <Button variant="ghost" className="text-dashboard-purple hover:text-dashboard-purple-dark">
+              <Button className="bg-dashboard-teal hover:bg-dashboard-teal-dark text-white shadow-sm">
                 Practice
               </Button>
             </div>
@@ -135,16 +135,16 @@ const Index = () => {
           <DashboardCard
             title="Aptitude Tests"
             subtitle="Enhance your skills"
-            className="hover:border-dashboard-purple border border-transparent transition-all"
+            className="bg-gradient-to-br from-white to-dashboard-teal/5 hover:shadow-lg border-2 border-dashboard-teal/20 hover:border-dashboard-teal/40 transition-all"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-dashboard-purple/10 rounded-lg">
-                  <BookOpen className="w-5 h-5 text-dashboard-purple" />
+                <div className="p-2 bg-dashboard-teal/10 rounded-lg">
+                  <BookOpen className="w-5 h-5 text-dashboard-teal" />
                 </div>
                 <p className="text-sm text-dashboard-neutral-400">Comprehensive test series</p>
               </div>
-              <Button variant="ghost" className="text-dashboard-purple hover:text-dashboard-purple-dark">
+              <Button className="bg-dashboard-teal hover:bg-dashboard-teal-dark text-white shadow-sm">
                 Explore
               </Button>
             </div>
@@ -155,11 +155,11 @@ const Index = () => {
         <DashboardCard
           title="Unlock Premium Features"
           subtitle="Get access to advanced insights and additional tests"
-          className="bg-gradient-to-br from-white to-dashboard-purple/5 border border-dashboard-purple/20"
+          className="bg-gradient-to-br from-white to-dashboard-teal/5 border border-dashboard-teal/20"
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="flex items-start gap-3">
-              <Award className="w-5 h-5 text-dashboard-purple mt-1" />
+              <Award className="w-5 h-5 text-dashboard-teal mt-1" />
               <div>
                 <p className="font-medium text-gray-900">Detailed Reports</p>
                 <p className="text-sm text-dashboard-neutral-400">
@@ -168,7 +168,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <TrendingUp className="w-5 h-5 text-dashboard-purple mt-1" />
+              <TrendingUp className="w-5 h-5 text-dashboard-teal mt-1" />
               <div>
                 <p className="font-medium text-gray-900">Progress Tracking</p>
                 <p className="text-sm text-dashboard-neutral-400">
@@ -177,7 +177,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Share2 className="w-5 h-5 text-dashboard-purple mt-1" />
+              <Share2 className="w-5 h-5 text-dashboard-teal mt-1" />
               <div>
                 <p className="font-medium text-gray-900">Share Results</p>
                 <p className="text-sm text-dashboard-neutral-400">
