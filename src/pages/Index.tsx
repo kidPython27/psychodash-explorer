@@ -2,7 +2,7 @@ import { useToast } from "@/hooks/use-toast";
 import { DashboardCard } from "@/components/DashboardCard";
 import { TestCard } from "@/components/TestCard";
 import { ProgressCard } from "@/components/ProgressCard";
-import { Award, Download, TrendingUp } from "lucide-react";
+import { Award, Download, TrendingUp, Share2 } from "lucide-react";
 
 const Index = () => {
   const { toast } = useToast();
