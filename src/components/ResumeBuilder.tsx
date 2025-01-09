@@ -103,8 +103,8 @@ export const ResumeBuilder = () => {
               <div className="bg-white rounded-lg p-8 shadow-inner min-h-full">
                 {/* Resume Preview Content */}
                 <div className="text-center mb-8">
-                  <h2 className="text-2xl font-bold">Shishir Gupta</h2>
-                  <p className="text-sm text-gray-600">gshishir2000@gmail.com | +1 (801) 636-1812 | Salt Lake City | USA</p>
+                  <h2 className="text-2xl font-bold">John Doe</h2>
+                  <p className="text-sm text-gray-600">john.doe@example.com | (555) 123-4567 | New York City | USA</p>
                 </div>
                 
                 <div className="space-y-6">
